@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <title>marcvanderkamp | Authorisation required</title>
+      <title>marcvanderkamp</title>
   
   <!-- mmenu -->
   <link href="css/jquery.mmenu.all.css" type="text/css" rel="stylesheet" />
@@ -22,7 +22,7 @@
 
         
   <!-- marcvanderkamp customisations -->
-  <link href="css/marcvanderkamp.css" rel="stylesheet" media="screen" />
+  <link href="css/chryswoods.css" rel="stylesheet" media="screen" />
 
 </head>
 
@@ -32,7 +32,7 @@
    <nav id='main_menu'>
      <ul>
        <li><a href='index.html'>Home</a></li>
-       <li><a href='main/courses.html'>Courses</a>
+       <li class=Selected><a href='main/courses.html'>Courses</a>
        <li><a href='main/publications.html'>Publications</a></li>
        <li><a href='main/links.html'>Useful Links</a></li>
        <li><a href='main/contact.html'>Contact Information</a></li>
@@ -51,9 +51,34 @@
 
     <div class="main_body" id="main_body">
       
-      <h1 id="authorisation-required">Authorisation required</h1>
-      <p>Sorry, but you need authorisation to access this page.</p>
-      <p>Please log in and try again.</p>
+      <div class="grid">
+        <div class="grid-item cw-box-big cw-btext-1-4">
+          <h1>Biomolecular Simulation Courses</h1>
+        </div>
+      
+        <div class="grid-item cw-box-wide cw-btext-5">
+          <h3>Some tutorial workshops on biomolecular modelling that have developed or I am working on.</h3>
+        </div>
+      
+        <a href="../qmmm/index.html">
+          <div class="grid-item cw-box-tall cw-bbutton-3-2">
+           <h3>QM/MM enzyme reaction modelling</h3>
+          </div>
+        </a>
+      
+        <a href="../enlighten/index.html">
+          <div class="grid-item cw-box cw-bbutton-1-10">
+           <h3>Enlighten: tools for automated protein-ligand modelling</h3>
+          </div>
+        </a>
+      
+        <a href="../index.html">
+          <div class="grid-item cw-box cw-bbutton-1-2">
+            <h3>Home</h3>
+          </div>
+        </a>
+      
+      </div>
           </div>
 
     <div class="main_tail" id="main_tail">
@@ -62,7 +87,7 @@
 	  <a href="main/courses.html">Courses</a>  | 
 	  <a href="main/contact.html">Contact</a></p>
        <p><a href="main/copyright.html">Copyright Information</a> |
-          <a href="mailto:marcvanderkamp@gmail.com?subject=There is a problem with your website&body=Hi, I found a problem on the page 401.html">Report a problem</a> I <a href="main/cookies.html">Privacy</a></p>
+          <a href="mailto:chryswoods@gmail.com?subject=There is a problem with your website&body=Hi, I found a problem on the page main/courses.html">Report a problem</a> I <a href="main/cookies.html">Privacy</a></p>
        <div class="clear"></div>
       </div>
     </div>

@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <title>marcvanderkamp | Authorisation required</title>
+      <title>marcvanderkamp | About this Website</title>
   
   <!-- mmenu -->
   <link href="css/jquery.mmenu.all.css" type="text/css" rel="stylesheet" />
@@ -22,7 +22,7 @@
 
         
   <!-- marcvanderkamp customisations -->
-  <link href="css/marcvanderkamp.css" rel="stylesheet" media="screen" />
+  <link href="css/chryswoods.css" rel="stylesheet" media="screen" />
 
 </head>
 
@@ -36,7 +36,7 @@
        <li><a href='main/publications.html'>Publications</a></li>
        <li><a href='main/links.html'>Useful Links</a></li>
        <li><a href='main/contact.html'>Contact Information</a></li>
-       <li><a href='main/website.html'>About this Website</a></li>
+       <li class=Selected><a href='main/website.html'>About this Website</a></li>
      </ul>
    </nav>
 
@@ -51,9 +51,27 @@
 
     <div class="main_body" id="main_body">
       
-      <h1 id="authorisation-required">Authorisation required</h1>
-      <p>Sorry, but you need authorisation to access this page.</p>
-      <p>Please log in and try again.</p>
+      <h1 id="about-this-website">About this Website</h1>
+      <p>I am currently building this website. Its setup is based on <a href="http://chryswoods.com">chryswoods.com</a>, who kindly has provided <a href="http://chryswoods.com/main/website.html">instructions</a> and openly hosts his website on github, as do I. Thanks, Christopher! 
+      I intend to use the following components:</p>
+      <ul>
+      <li><a href="http://getbootstrap.com/">Bootstrap</a> - This provides the base CSS, fonts and 
+      javascript for the site.</li>
+      </ul>
+      <p>In addition, the website is built using:</p>
+      <ul>
+      <li><a href="http://github.com">GitHub</a> - The entire website is version controlled and hosted 
+      in <a href="https://github.com/marcvanderkamp/marcvanderkamp.io">this repository</a>. Each webpage is 
+      written in GitHub-flavoured markdown, in which there is a little embedded HTML.</li>
+      <li><a href="http://pandoc.org">Pandoc</a> - I intend use Pandoc to convert the GitHub flavoured markdown into 
+      HTML5.</li>
+      <li><a href="http://python.org">Python</a> - I will be using a small <a href="https://github.com/chryswoods/siremol.org/blob/master/chryswoods.com/pandoc/convert_to_html.py">Python script</a>, written by chryswoods, 
+      which uses Pandoc to convert all of the markdown files in the directories for the website 
+      into HTML5.</li>
+      </ul>
+      <p>You can create your own copy of this website by installing Python, Pandoc and git, and then 
+      cloning the site using the command;</p>
+<pre><code>git clone https://github.com/marcvanderkamp/marcvanderkamp.github.io</code></pre>
           </div>
 
     <div class="main_tail" id="main_tail">
@@ -62,7 +80,7 @@
 	  <a href="main/courses.html">Courses</a>  | 
 	  <a href="main/contact.html">Contact</a></p>
        <p><a href="main/copyright.html">Copyright Information</a> |
-          <a href="mailto:marcvanderkamp@gmail.com?subject=There is a problem with your website&body=Hi, I found a problem on the page 401.html">Report a problem</a> I <a href="main/cookies.html">Privacy</a></p>
+          <a href="mailto:chryswoods@gmail.com?subject=There is a problem with your website&body=Hi, I found a problem on the page main/website.html">Report a problem</a> I <a href="main/cookies.html">Privacy</a></p>
        <div class="clear"></div>
       </div>
     </div>

@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <title>marcvanderkamp | Authorisation required</title>
+      <title>marcvanderkamp | Privacy / Cookies</title>
   
   <!-- mmenu -->
   <link href="css/jquery.mmenu.all.css" type="text/css" rel="stylesheet" />
@@ -22,7 +22,7 @@
 
         
   <!-- marcvanderkamp customisations -->
-  <link href="css/marcvanderkamp.css" rel="stylesheet" media="screen" />
+  <link href="css/chryswoods.css" rel="stylesheet" media="screen" />
 
 </head>
 
@@ -51,9 +51,18 @@
 
     <div class="main_body" id="main_body">
       
-      <h1 id="authorisation-required">Authorisation required</h1>
-      <p>Sorry, but you need authorisation to access this page.</p>
-      <p>Please log in and try again.</p>
+      <h1 id="privacy-cookies">Privacy / Cookies</h1>
+      <p>This site does not directly set or read any identifiable information 
+      from its visitors (e.g. cookies).</p>
+      <p>However, in the near future, the site will use 
+      Google Analytics to provide log information about who is visiting 
+      the site, which pages are visited, and what search terms are 
+      used to find different content. To do this, Google Analytics 
+      sets some cookies that are used to track your visit. You can 
+      read more about the privacy controls and information of 
+      Google Analytics <a href="https://www.google.com/intl/en/analytics/learn/privacy.html">here</a>.</p>
+      <p>If you do not want to be tracked by Google Analytics on this 
+      site, then <a href="javascript:gaOptout()">please click here</a>.</p>
           </div>
 
     <div class="main_tail" id="main_tail">
@@ -62,7 +71,7 @@
 	  <a href="main/courses.html">Courses</a>  | 
 	  <a href="main/contact.html">Contact</a></p>
        <p><a href="main/copyright.html">Copyright Information</a> |
-          <a href="mailto:marcvanderkamp@gmail.com?subject=There is a problem with your website&body=Hi, I found a problem on the page 401.html">Report a problem</a> I <a href="main/cookies.html">Privacy</a></p>
+          <a href="mailto:chryswoods@gmail.com?subject=There is a problem with your website&body=Hi, I found a problem on the page main/cookies.html">Report a problem</a> I <a href="main/cookies.html">Privacy</a></p>
        <div class="clear"></div>
       </div>
     </div>

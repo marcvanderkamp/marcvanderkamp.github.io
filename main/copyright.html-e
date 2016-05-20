@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <title>marcvanderkamp | Authorisation required</title>
+      <title>marcvanderkamp | Copyright</title>
   
   <!-- mmenu -->
   <link href="css/jquery.mmenu.all.css" type="text/css" rel="stylesheet" />
@@ -22,7 +22,7 @@
 
         
   <!-- marcvanderkamp customisations -->
-  <link href="css/marcvanderkamp.css" rel="stylesheet" media="screen" />
+  <link href="css/chryswoods.css" rel="stylesheet" media="screen" />
 
 </head>
 
@@ -51,9 +51,22 @@
 
     <div class="main_body" id="main_body">
       
-      <h1 id="authorisation-required">Authorisation required</h1>
-      <p>Sorry, but you need authorisation to access this page.</p>
-      <p>Please log in and try again.</p>
+      <h1 id="copyright">Copyright</h1>
+      <p>All of the content (text and images) on this website, with the exception 
+      of that provided by third parties, is copyright (C) Marc van der Kamp, 2016-2017.</p>
+      <p>Please feel free to download things from the site. However, if you do so, then please retain this copyright notice 
+      and do not try to misrepresent the original authorship of this work. This 
+      material may not be used for commercial purposes (e.g. as the basis for paid 
+      training workshops) and is licensed under the 
+      <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+      <p><em>Note</em>: The setup of this site and some of its contents is heavily inspired by <a href="http://chryswoods.com">chryswoods.com</a> (see also <a href="http://marcvanderkamp.github.io/website.html">here</a>)</p>
+      <p>This site makes use of the following frameworks / libraries:</p>
+      <ul>
+      <li><a href="http://getbootstrap.com">Bootstrap</a></li>
+      <li><a href="http://mmenu.frebsite.nl">mmenu</a></li>
+      <li><a href="http://masonry.desandro.com">Masonry</a></li>
+      </ul>
+      <p>Please see the above sites for their relevant licenses.</p>
           </div>
 
     <div class="main_tail" id="main_tail">
@@ -62,7 +75,7 @@
 	  <a href="main/courses.html">Courses</a>  | 
 	  <a href="main/contact.html">Contact</a></p>
        <p><a href="main/copyright.html">Copyright Information</a> |
-          <a href="mailto:marcvanderkamp@gmail.com?subject=There is a problem with your website&body=Hi, I found a problem on the page 401.html">Report a problem</a> I <a href="main/cookies.html">Privacy</a></p>
+          <a href="mailto:chryswoods@gmail.com?subject=There is a problem with your website&body=Hi, I found a problem on the page main/copyright.html">Report a problem</a> I <a href="main/cookies.html">Privacy</a></p>
        <div class="clear"></div>
       </div>
     </div>

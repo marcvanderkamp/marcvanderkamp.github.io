@@ -22,7 +22,7 @@
 
         
   <!-- marcvanderkamp customisations -->
-  <link href="css/chryswoods.css" rel="stylesheet" media="screen" />
+  <link href="css/marcvanderkamp.css" rel="stylesheet" media="screen" />
 
 </head>
 
@@ -71,7 +71,7 @@
 	  <a href="main/courses.html">Courses</a>  | 
 	  <a href="main/contact.html">Contact</a></p>
        <p><a href="main/copyright.html">Copyright Information</a> |
-          <a href="mailto:chryswoods@gmail.com?subject=There is a problem with your website&body=Hi, I found a problem on the page 404.html">Report a problem</a> I <a href="main/cookies.html">Privacy</a></p>
+          <a href="mailto:marcvanderkamp@gmail.com?subject=There is a problem with your website&body=Hi, I found a problem on the page 404.html">Report a problem</a> I <a href="main/cookies.html">Privacy</a></p>
        <div class="clear"></div>
       </div>
     </div>

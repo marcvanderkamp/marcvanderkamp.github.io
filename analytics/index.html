@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>marcvanderkamp | Sire Usage Analytics</title>
+  
+  <!-- mmenu -->
+  <link href="../css/jquery.mmenu.all.css" type="text/css" rel="stylesheet" />
+
+  <!-- Bootstrap -->
+  <link href="../css/bootstrap-united.min.css" rel="stylesheet" media="screen" />
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+        
+  <!-- marcvanderkamp customisations -->
+  <link href="../css/chryswoods.css" rel="stylesheet" media="screen" />
+
+</head>
+
+<!-- Main page, divided into header, body and tail -->
+<body>
+  <!-- The main side menu -->
+   <nav id='main_menu'>
+     <ul>
+       <li><a href='../index.html'>Home</a></li>
+       <li><a href='../main/courses.html'>Courses</a>
+       <li><a href='../main/publications.html'>Publications</a></li>
+       <li><a href='../main/links.html'>Useful Links</a></li>
+       <li><a href='../main/contact.html'>Contact Information</a></li>
+       <li><a href='../main/website.html'>About this Website</a></li>
+     </ul>
+   </nav>
+
+  <div>  <!-- main wrapper for mmenu -->
+    <nav class="navbar navbar-default main_header">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li><a class="navbar-text" style="font-size:200%;" href="#main_menu"><img src="../images/hamburger.png" height="30em" />&nbsp;&nbsp;marcvanderkamp</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="main_body" id="main_body">
+      
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+      <script type="text/javascript">
+      google.charts.load("current", {"packages":["corechart", "geochart"]});
+      google.charts.setOnLoadCallback(drawUsageCharts);
+      
+      function loadJSON(filename, callback)
+      {   
+          var xobj = new XMLHttpRequest();
+          xobj.overrideMimeType("application/json");
+          xobj.open('GET', filename, true);
+          xobj.onreadystatechange = function () {
+                if (xobj.readyState == 4 && xobj.status == "200") {
+                  // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+                  callback(xobj.responseText);
+                }
+          };
+          xobj.send(null);  
+      }
+      
+      function drawUsageCharts() 
+      {
+          loadJSON("http://siremol.org/phonehome/usagestats_app.json", function(response)
+          {
+              json = JSON.parse(response);
+      
+              var baroptions = {
+                width: '800',
+                height: '600',
+                hAxis: {"logScale" : true}
+              };
+      
+              var charts = [];
+      
+              for (var t in json)
+              {
+                  var data = [ ["version", "usage"] ];
+      
+                  for (var key in json[t])
+                  {
+                      data.push( [ key, json[t][key] ] );
+                      console.log(key + " " + json[t][key]);
+                  }
+      
+                  tabledata = google.visualization.arrayToDataTable(data);
+      
+                  var bar = new google.visualization.BarChart(document.getElementById("bar_by_" + t));
+                  bar.draw(tabledata, baroptions);
+                  charts.push(bar);
+              }
+          });
+      }
+      
+      </script>
+      <h2 id="sire-usage-analytics">Sire Usage Analytics</h2>
+      <div class="grid">
+        <a href="./geochart.html">
+          <div class="grid-item cw-box cw-bbutton-1-1">
+            <h3>Who is using Sire?</h3>
+          </div>
+        </a>
+        <a href="./appchart.html">
+          <div class="grid-item cw-box cw-bbutton-2-2">
+            <h3>Which apps are in use?</h3>
+          </div>
+        </a>
+        <a href="./versionchart.html">
+          <div class="grid-item cw-box cw-bbutton-3-3">
+            <h3>Which versions are used?</h3>
+          </div>
+        </a>
+        <a href="./oschart.html">
+          <div class="grid-item cw-box cw-bbutton-4-4">
+            <h3>What operating systems are used?</h3>
+          </div>
+        </a>
+      </div>
+      <p>Sire has in-built analytics to let the developers know whether or not Sire is useful and is being used.</p>
+      <p>Every time Sire runs, a small amount of data is collected and then transmitted back to <a href="http://siremol.org" class="uri">http://siremol.org</a>. 
+      This data is very useful for us, as it tells us what sort of computers Sire is being run on, which versions 
+      of Sire are actively used, and which Sire applications are popular.</p>
+      <p><strong>It is very easy to stop Sire from sending this information.</strong></p>
+      <p>Just set the environment variable 
+<strong>SIRE_DONT_PHONEHOME</strong> to any value, e.g. add <code>export SIRE_DONT_PHONEHOME=1</code> to your <code>.bashrc</code> file, 
+or run Sire applications with <code>SIRE_DONT_PHONEHOME=1</code> before the call, e.g. 
+<code>SIRE_DONT_PHONEHOME=1 $HOME/sire.app/bin/ligandswap ...</code></p>
+      <p>The code that collects and sends the data can be <a href="https://github.com/michellab/Sire/blob/devel/wrapper/__init__.py">seen here</a>. 
+The function is called <code>_uploadUsageData()</code>, and you can see in this code that it involves collecting information 
+      about the operating system, computer processor, version of Sire and the name of the executable that uses Sire. This 
+      information is converted to JSON and sent to the PHP script <a href="https://github.com/chryswoods/siremol.org/blob/master/phonehome/postusagestats.php">postusagestats.php</a>. This is then decoded and placed into a set of SQL databases, together with a rough (country/region) lookup 
+      of the IP address from which the http request originated.</p>
+      <p>This data is then processed daily using the script <a href="https://github.com/chryswoods/siremol.org/blob/master/phonehome/cronstats.php">cronstats.php</a>. 
+      This extracts summaries from the databases that are converted to JSON files that are hosted on this website, e.g. Sire application data is <a href="http://siremol.org/phonehome/usagestats_app.json" class="uri">http://siremol.org/phonehome/usagestats_app.json</a>.</p>
+      <p>The pages linked to via the buttons above use this data to draw nice graphs, using the Google chart library (note that <strong>no information is sent to Google, 
+      as all drawing occurs on your local machine</strong>).</p>
+      <p>Note that this data is only available since the (private) release of Sire 2015.0, and only widely used in the 
+      public releases of Sire since 2016.1 (i.e. after April 2016).</p>
+          </div>
+
+    <div class="main_tail" id="main_tail">
+      <div class="wrapper">
+       <p>Quick Links | <a href="../index.html">Home</a> | 
+	  <a href="../main/courses.html">Courses</a>  | 
+	  <a href="../main/contact.html">Contact</a></p>
+       <p><a href="../main/copyright.html">Copyright Information</a> |
+          <a href="mailto:chryswoods@gmail.com?subject=There is a problem with your website&body=Hi, I found a problem on the page analytics/README.html">Report a problem</a> I <a href="../main/cookies.html">Privacy</a></p>
+       <div class="clear"></div>
+      </div>
+    </div>
+
+  </div> <!-- end of main wrapper for mmenu -->
+
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.mmenu.min.all.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/masonry.pkgd.min.js"></script>
+  <script type="text/javascript" src="../js/imagesloaded.pkgd.min.js"></script>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script type="text/javascript" src="../js/ie10-viewport-bug-workaround.js"></script>
+
+  <!-- Now the script to style and activate the menu -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#main_menu").mmenu({
+                             extensions: ["border-full", "multiline", "theme-black"]
+                             });
+
+      // init Masonry
+      var $grid = $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: 200,
+        gutter: 2,
+        isFitWidth: true
+      });
+      // layout Isotope after each image loads
+      $grid.imagesLoaded().progress( function() {
+        $grid.masonry();
+      });  
+    });
+
+  </script>
+
+  <!-- Google analytics tracking -->
+  <script type="text/javascript">
+    // Set to the same value as the web property used on the site
+    var gaProperty = 'UA-2248955-4';
+
+    // Disable tracking if the opt-out cookie exists.
+    var disableStr = 'ga-disable-' + gaProperty;
+    if (document.cookie.indexOf(disableStr + '=true') > -1) {
+      window[disableStr] = true;
+    }
+
+    // Opt-out function
+    function gaOptout() {
+      document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+      window[disableStr] = true;
+      alert("Google Analytics Tracking for this website has been disabled");
+    }
+
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-2248955-4"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+  </script>
+</body>
+
+</html>

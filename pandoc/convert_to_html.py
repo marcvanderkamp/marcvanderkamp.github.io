@@ -65,13 +65,13 @@ def convertDir(dir):
             # first, find the title of this page. This is the first header
             title = findTitle(fullfile)
 
-            MENU.write("<li><a href=\"$rootdir$/%s\">%s</a></li>\n" % (relfile,title))
+            MENU.write("<li><a href=\"%s\">%s</a></li>\n" % (relfile,title))
 
             my_menu = []
             for menu_line in menu_lines:
                 menu_line = menu_line.replace("\"", "'")
 
-                if menu_line.find("$rootdir$/%s" % relfile) != -1:
+                if menu_line.find("%s" % relfile) != -1:
                     menu_line = menu_line.replace("<li>", "<li class=\"Selected\">")
 
                 menu_line = menu_line.replace("$rootdir$", relpath)

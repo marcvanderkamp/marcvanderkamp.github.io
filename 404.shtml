@@ -8,10 +8,10 @@
       <title>marcvanderkamp | Page unavailable</title>
   
   <!-- mmenu -->
-  <link href="./css/jquery.mmenu.all.css" type="text/css" rel="stylesheet" />
+  <link href="css/jquery.mmenu.all.css" type="text/css" rel="stylesheet" />
 
   <!-- Bootstrap -->
-  <link href="./css/bootstrap-united.min.css" rel="stylesheet" media="screen" />
+  <link href="css/bootstrap-united.min.css" rel="stylesheet" media="screen" />
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,7 +22,7 @@
 
         
   <!-- marcvanderkamp customisations -->
-  <link href="./css/chryswoods.css" rel="stylesheet" media="screen" />
+  <link href="css/chryswoods.css" rel="stylesheet" media="screen" />
 
 </head>
 
@@ -31,12 +31,12 @@
   <!-- The main side menu -->
    <nav id='main_menu'>
      <ul>
-       <li><a href='./index.html'>Home</a></li>
-       <li><a href='./main/courses.html'>Courses</a>
-       <li><a href='./main/publications.html'>Publications</a></li>
-       <li><a href='./main/links.html'>Useful Links</a></li>
-       <li><a href='./main/contact.html'>Contact Information</a></li>
-       <li><a href='./main/website.html'>About this Website</a></li>
+       <li><a href='index.html'>Home</a></li>
+       <li><a href='main/courses.html'>Courses</a>
+       <li><a href='main/publications.html'>Publications</a></li>
+       <li><a href='main/links.html'>Useful Links</a></li>
+       <li><a href='main/contact.html'>Contact Information</a></li>
+       <li><a href='main/website.html'>About this Website</a></li>
      </ul>
    </nav>
 
@@ -44,7 +44,7 @@
     <nav class="navbar navbar-default main_header">
       <div class="container-fluid">
         <ul class="nav navbar-nav">
-          <li><a class="navbar-text" style="font-size:200%;" href="#main_menu"><img src="./images/hamburger.png" height="30em" />&nbsp;&nbsp;marcvanderkamp</a></li>
+          <li><a class="navbar-text" style="font-size:200%;" href="#main_menu"><img src="images/hamburger.png" height="30em" />&nbsp;&nbsp;marcvanderkamp</a></li>
         </ul>
       </div>
     </nav>
@@ -67,11 +67,11 @@
 
     <div class="main_tail" id="main_tail">
       <div class="wrapper">
-       <p>Quick Links | <a href="./index.html">Home</a> | 
-	  <a href="./main/courses.html">Courses</a>  | 
-	  <a href="./main/contact.html">Contact</a></p>
-       <p><a href="./main/copyright.html">Copyright Information</a> |
-          <a href="mailto:chryswoods@gmail.com?subject=There is a problem with your website&body=Hi, I found a problem on the page 404.html">Report a problem</a> I <a href="./main/cookies.html">Privacy</a></p>
+       <p>Quick Links | <a href="index.html">Home</a> | 
+	  <a href="main/courses.html">Courses</a>  | 
+	  <a href="main/contact.html">Contact</a></p>
+       <p><a href="main/copyright.html">Copyright Information</a> |
+          <a href="mailto:chryswoods@gmail.com?subject=There is a problem with your website&body=Hi, I found a problem on the page 404.html">Report a problem</a> I <a href="main/cookies.html">Privacy</a></p>
        <div class="clear"></div>
       </div>
     </div>
@@ -79,14 +79,14 @@
   </div> <!-- end of main wrapper for mmenu -->
 
   <!-- Placed at the end of the document so the pages load faster -->
-  <script type="text/javascript" src="./js/jquery-1.11.2.min.js"></script>
-  <script type="text/javascript" src="./js/jquery.mmenu.min.all.js"></script>
-  <script type="text/javascript" src="./js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="./js/masonry.pkgd.min.js"></script>
-  <script type="text/javascript" src="./js/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+  <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script type="text/javascript" src="./js/ie10-viewport-bug-workaround.js"></script>
+  <script type="text/javascript" src="js/ie10-viewport-bug-workaround.js"></script>
 
   <!-- Now the script to style and activate the menu -->
   <script type="text/javascript">
